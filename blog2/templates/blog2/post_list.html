@@ -2,15 +2,17 @@
 
 
 
+{% load crispy_forms_tags %}
 
 {% block content %}
 
 <form method="GET">
 
-  {{filter_obj.form}}
+  {{filter_obj.form | crispy }}
 
-<input type="submit" value="Search">
+<input type="submit" value="Search" class="btn btn-success">
 </form>
+
 
 
 <div class="row m-5">

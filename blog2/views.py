@@ -10,13 +10,17 @@ from . models import Course
 def post_list(request) :
     
     # filters
-    filter_obj= CourseFilter(request.GET,queryset= Course.objects.all())
+    filter_obj= CourseFilter(request.GET) # fetch all data from data base ,, if request.GET={}==>
+                                           # CourseFilter fetch all data 
+    
+    #print(CourseFilter(request.GET).queryset,"-------------CourseFilter(request.GET).queryset -------------")
+    #print(filter_obj.qs,"-------------filter_obj.qs------------------")
     
     course_list = filter_obj.qs
     paginator = Paginator(course_list, 6) # Show 25 contacts per page.
     
     page_number = request.GET.get('page')
-    print(request.GET.get('page'),"****************************")
+    #print(request.GET.get('page'),"*************request.GET.get('page')************")
     page_obj = paginator.get_page(page_number)
     
     return render(request, 'blog2/post_list.html' ,  {'page_obj': page_obj ,
