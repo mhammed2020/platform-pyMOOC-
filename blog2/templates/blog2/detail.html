@@ -1,0 +1,28 @@
+{% extends "blog/home.html" %}
+
+
+{% block content %}
+
+
+
+<div class="card">
+    <img src="{{post.image.url}}" class="card-img-top sx" alt="...">
+
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">{{post.content}}.</p>
+      <a href="{% url 'home-post-path' %}" class="btn btn-primary">Back</a>
+
+
+{% if post.author == request.user %}
+
+<a href="{% url 'update-path' post.pk %}" class="btn btn-outline-info">Update</a>
+
+{% endif %}
+  
+
+
+    </div>
+  </div>
+
+{% endblock  %}

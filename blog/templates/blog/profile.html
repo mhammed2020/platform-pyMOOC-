@@ -1,0 +1,34 @@
+
+{% extends "blog/home.html" %}
+
+
+
+{% block content %}
+
+
+
+<div class="card" style="width: 50rem;">
+
+<div class="media">
+    <img src="{{profile.img.url}}" class="rounded-circle img_profile" alt="...">
+
+    <div class="media-body">
+      <h5 class="card-title">{{profile.user.username}}</h5>
+      <p class="card-text">{{profile.user.email}} </p>
+      <p class="card-text">{{profile.user.first_name}} </p>
+      <p class="card-text">{{profile.user.last_name}} </p>
+
+      <a href="{% url 'edit_profile-path' %}" class="btn btn-primary">Edit</a>
+   
+
+
+    </div>
+
+</div>
+
+  </div>
+
+
+
+
+{% endblock  %}
