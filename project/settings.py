@@ -141,3 +141,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # LOGIN_REDIRECT_URL = "home-path"
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+GOOGLE_RECAPTCHA_SECRET_KEY = 'key'

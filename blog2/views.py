@@ -92,5 +92,13 @@ def delete_course(request,id) :
         return redirect('home-post-path')
     
     return render(request,'blog2/delete.html',{'course' :Course.objects.get(id=id)})
+
+
+def user_course(request,username) :
+    user = User.objects.get(username = username )
+    print(user.course.filter(author=user),"userrrrrrrrrrrrrrrrrrrrr")
+      
+    
+    return render(request, 'blog2/user_course.html', {'user_posts' : user.course.filter(author=user)})
     
     

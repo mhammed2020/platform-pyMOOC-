@@ -10,7 +10,7 @@ class Course(models.Model):
     content = models.TextField()   
     post_date = models.DateTimeField(default=timezone.now ) 
     post_update = models.DateTimeField(auto_now = True) 
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User,related_name='course' , on_delete=models.CASCADE)
     price = models.IntegerField()
     image = models.ImageField(default = 'default.jpg' , upload_to ='courses_pics')
     duree = models.IntegerField(blank=True, null=True)

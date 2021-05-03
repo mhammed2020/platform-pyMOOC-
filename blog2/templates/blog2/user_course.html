@@ -1,0 +1,51 @@
+{% extends "blog/home.html" %}
+
+
+
+{% block content %}
+  
+
+
+<div class="row m-5">
+    {% for course in user_posts   %} 
+
+<div class="card m-3" style="width: 18rem;">
+  
+    <img src="{{course.image.url}}" class="card-img-top" alt="...">
+ 
+    <div class="card-body">
+      <p class="card-title text-center border-bottom"><strong>  {{course.title}}  </strong> 
+
+       
+        {% if course.is_new  %}
+        <span class="badge badge-pill badge-danger">New</span>
+
+        {% endif %}
+            
+    </p>
+<br>
+
+<div class="media mb-3">
+    <img src="{{course.author.pp.img.url}}" class="mr-3 rounded-circle img_profile" alt="...">
+    <div class="media-body">
+      <p>Powred by : {{course.author.username}}</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+      </svg>
+    
+     {{course.duree}} hours
+    </div>
+  </div>
+
+ 
+
+      <p >{{course.content | safe | truncatewords_html:15}}.</p>
+      <a href="{% url 'detail-path' course.pk %}" class="btn btn-primary">View Course</a>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endblock  %}
