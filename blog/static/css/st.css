@@ -6,7 +6,8 @@
 
   }
 
-  .sx {
-    max-width: 100%;
-    height: auto;
-  }
+ #mainNav.navbar-shrink {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #0c65bd;
+}

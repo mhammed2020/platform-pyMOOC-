@@ -5,6 +5,7 @@ from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from . decorators import author_required
+from django.core.exceptions import PermissionDenied
 
 from . filters import CourseFilter
 # Create your views here.
@@ -72,7 +73,6 @@ def create_course(request) :
 def update_course(request,id) :
     
     # course = Course.objects.get(id=id) 
-    
     # if course.author == request.user  :
     
     if request.method == 'POST' :
@@ -83,8 +83,9 @@ def update_course(request,id) :
             obj.author = request.user
             obj.save()
             return redirect('home-post-path')
+        
     # else :
-    #     return redirect('home-post-path')
+    #     raise  PermissionDenied #redirect('home-post-path')
                    
     return render(request,'blog2/update.html', {'form' : 
         CourseForm(instance=Course.objects.get(id=id)) ,
@@ -110,7 +111,7 @@ def delete_course(request,id) :
 
 def user_course(request,username) :
     user = User.objects.get(username = username )
-    print(user.course.filter(author=user),"userrrrrrrrrrrrrrrrrrrrr")
+    print(user.course.filter(author=user),"user")
       
     
     return render(request, 'blog2/user_course.html', {'user_posts' : user.course.filter(author=user)})
