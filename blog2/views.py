@@ -111,9 +111,9 @@ def delete_course(request,id) :
 
 def user_course(request,username) :
     user = User.objects.get(username = username )
-    print(user.course.filter(author=user),"user")
+
       
     
-    return render(request, 'blog2/user_course.html', {'user_posts' : user.course.filter(author=user)})
+    return render(request, 'blog2/user_course.html', {'user_posts' : user.course.all()})
     
     
