@@ -15,6 +15,10 @@
 
 .form-control {
   display: block;
-  width: 64%;
+  width: 75%;
 
+}
+
+.django-ckeditor-widget {
+  width: 100%;
 }
