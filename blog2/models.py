@@ -4,11 +4,12 @@ from django.utils import timezone
 from django.urls import reverse
 # Create your models here.
 from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 class Course(models.Model):
     
     title = models.CharField(max_length=100, blank=True, null=True)
     #content = RichTextField()  
-    content = RichTextField(config_name='awesome_ckeditor')
+    content = RichTextUploadingField()  
     post_date = models.DateTimeField(default=timezone.now ) 
     post_update = models.DateTimeField(auto_now = True) 
     author = models.ForeignKey(User,related_name='course' , on_delete=models.CASCADE)
