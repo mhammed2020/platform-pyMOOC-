@@ -15,10 +15,11 @@
 
 .form-control {
   display: block;
-  width: 75%;
+  width: 80%;
 
 }
 
-.django-ckeditor-widget {
-  width: 100%;
+input, button, select, optgroup, textarea {
+  margin-left: 91px;
+
 }
