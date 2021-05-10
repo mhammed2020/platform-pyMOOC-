@@ -11,3 +11,10 @@
     padding-bottom: 1rem;
     background-color: #0c65bd;
 }
+
+
+.form-control {
+  display: block;
+  width: 64%;
+
+}

@@ -3,11 +3,12 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
 # Create your models here.
-
+from ckeditor.fields import RichTextField
 class Course(models.Model):
     
     title = models.CharField(max_length=100, blank=True, null=True)
-    content = models.TextField()   
+    #content = RichTextField()  
+    content = RichTextField(config_name='awesome_ckeditor')
     post_date = models.DateTimeField(default=timezone.now ) 
     post_update = models.DateTimeField(auto_now = True) 
     author = models.ForeignKey(User,related_name='course' , on_delete=models.CASCADE)

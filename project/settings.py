@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'blog2',
     'django_filters',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -143,4 +144,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-GOOGLE_RECAPTCHA_SECRET_KEY = 'key'
+GOOGLE_RECAPTCHA_SECRET_KEY = 'keys'
+
+
+#ckeditor
+CKEDITOR_UPLOAD_PATH = "uploads/"

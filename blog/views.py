@@ -7,11 +7,10 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from . models import Profile
 
-# reacptcha 
+# reacptcha
+
 import requests 
 from django.conf import settings
-
-
 
 from django.contrib.auth.models import  auth,User
 def home(request) :
@@ -33,8 +32,8 @@ def register_view(request) :
                 'secret' : settings.GOOGLE_RECAPTCHA_SECRET_KEY,
                 'response' : response
             }
-            r = requests.post('https://www.google.com/recaptcha/api/siteverify',data=data)
-            result = r.json()
+            data_response = requests.post('https://www.google.com/recaptcha/api/siteverify',data=data)
+            result = data_response.json()
             
             if result['success'] :
                 obj.save()
