@@ -49,6 +49,32 @@ INSTALLED_APPS = [
 #ckeditor
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'Basic',
+#     },
+# }
+
+CKEDITOR_CONFIGS = {
+    #-------------------------
+    'default': {
+        'toolbar': 'Custom',
+         'toolbar_Custom': [
+            ['Bold', 'Link', 'Unlink', 'Image'],
+         ],
+    },
+    #------------------------
+    'special': 
+        {'toolbar': 'Special', 'height': 500,
+         'toolbar_Special': 
+             [
+                 ['Bold', 'Image'],
+                 ['CodeSnippet'], 
+             ], 'extraPlugins': 'codesnippet',
+         }
+    
+    
+}
 
 
 MIDDLEWARE = [
@@ -85,12 +111,30 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'demo_test',
+#         'USER': 'postgres',
+#         'PASSWORD' : 'psw',
+#         'HOST'  : 'localhost',
+#         'PORT'  : '5432'
+#     }
+# }
+
+
+
+
 
 
 # Password validation
@@ -157,7 +201,7 @@ GOOGLE_RECAPTCHA_SECRET_KEY = 'keys'
 
 
 
-
+'''
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -223,3 +267,7 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
+
+
+
+'''

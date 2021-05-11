@@ -9,7 +9,9 @@ class Course(models.Model):
     
     title = models.CharField(max_length=100, blank=True, null=True)
     #content = RichTextField()  
-    content = RichTextUploadingField()  
+    code_snippet = RichTextUploadingField(blank = True, null =True , config_name ='special')  
+
+    content = RichTextUploadingField(blank = True, null =True)  
     post_date = models.DateTimeField(default=timezone.now , verbose_name ='Creation Date') 
     post_update = models.DateTimeField(auto_now = True) 
     author = models.ForeignKey(User,related_name='course' , on_delete=models.CASCADE)

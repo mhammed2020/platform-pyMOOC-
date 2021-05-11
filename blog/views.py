@@ -25,28 +25,15 @@ def register_view(request) :
         print("******",obj.__dict__,"---------------------")
         if obj.is_valid() :
             
-            
-            #recaptcha verification bofore save any object in db 
-            response = request.POST.get('g-recaptcha-response')
-            data = {
-                'secret' : settings.GOOGLE_RECAPTCHA_SECRET_KEY,
-                'response' : response
-            }
-            data_response = requests.post('https://www.google.com/recaptcha/api/siteverify',data=data)
-            result = data_response.json()
-            
-            if result['success'] :
-                obj.save()
-            # print("******",obj.__dict__,"---------------------")
-                username = obj.cleaned_data.get('username')
-                # print(obj.cleaned_data,"---------------------")
-                messages.success(request,"welcome {} registration with success ".format(username))
-                # print(obj.instance,"*****************")
-                # print(obj.instance,"**********************instance instance")
-                return redirect('login-path')
-            else :
-                messages.warning(request,"Invalid recaptcha ! ")
-                return redirect('register-path')
+            obj.save()
+        # print("******",obj.__dict__,"---------------------")
+            username = obj.cleaned_data.get('username')
+            # print(obj.cleaned_data,"---------------------")
+            messages.success(request,"welcome {} registration with success ".format(username))
+            # print(obj.instance,"*****************")
+            # print(obj.instance,"**********************instance instance")
+            return redirect('login-path')
+        
         else :
             messages.warning(request," try again ! ")
 
