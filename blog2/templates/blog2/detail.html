@@ -11,7 +11,7 @@
     <div class="card-body">
       <h5 class="card-title">{{post.title}}</h5>
       <p class="card-text">{{post.content | safe}}.</p>
-      <p class="card-text">{{post.content2 | safe}}.</p>
+      <p class="card-text">{{post.code_snippet | safe }}.</p>
 
       <a href="{% url 'home-post-path' %}" class="btn btn-primary">Back</a>
 

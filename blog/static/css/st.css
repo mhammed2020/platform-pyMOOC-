@@ -23,3 +23,21 @@ input, button, select, optgroup, textarea {
   margin-left: 91px;
 
 }
+
+
+
+.table .thead-dark th {
+  color: #fff;
+  background-color: #1b7fe3;
+}
+.lik{
+  background-color: #1b7fe3;
+  color: #fff;
+}
+
+.btn-outline-primary {
+  color: #367bfe;
+  border-color: #367bfe;
+}
+
+

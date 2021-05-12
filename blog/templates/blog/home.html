@@ -19,6 +19,12 @@
 
         <link href="{% static 'css/st.css' %}" rel="stylesheet" />
 
+        <!-- code snippet -->
+
+        <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
         <!-- <style>
 
             .img_profile {
@@ -63,9 +69,13 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'home-post-path' %}">Couses </a></li>
 
 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'create-path' %}">Create Course</a></li>
+<li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'esri-path' %}">ESRI</a></li>
+<li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'prog-path' %}">Formation</a></li>
 
                         {% else %}
    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'home-post-path' %}">Blog</a></li>
+   <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'esri-path' %}">ESRI</a></li>
+   <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'prog-path' %}">Formation</a></li>
 
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login-path' %}">Login</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'register-path' %}">Join</a></li>

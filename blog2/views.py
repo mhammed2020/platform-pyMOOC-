@@ -115,3 +115,15 @@ def user_course(request,username) :
 
 
     return render(request, 'blog2/user_course.html', {'user_posts' : user.course.all()})
+
+
+def esri(request) :
+
+    
+    return render(request,'blog2/esri.html')
+
+
+def prog(request) :
+
+    
+    return render(request,'blog2/prog.html')

@@ -9,6 +9,9 @@ urlpatterns = [
     path('delete/<int:id>/', views.delete_course, name ="delete-path"),
     
     path('user/<str:username>', views.user_course, name ="user-path"),
+    path('esri/', views.esri, name ="esri-path"),
+
+    path('prog/', views.prog, name ="prog-path"),
 
 
 
