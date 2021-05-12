@@ -58,10 +58,19 @@
 
 
                        
+ <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">
+
+ <img class="img-py" src="{% static 'assets/py.png' %}" alt="" />
+
+
+ </a>
+
+</li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'prog-path' %}">Formation</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'esri-path' %}">ESRI</a></li>
 
                         {% if user.is_authenticated %}
 
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'profile-path' %}">Hello ,{{request.user}}</a></li>
@@ -69,13 +78,9 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'home-post-path' %}">Couses </a></li>
 
 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'create-path' %}">Create Course</a></li>
-<li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'esri-path' %}">ESRI</a></li>
-<li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'prog-path' %}">Formation</a></li>
 
                         {% else %}
    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'home-post-path' %}">Blog</a></li>
-   <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'esri-path' %}">ESRI</a></li>
-   <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'prog-path' %}">Formation</a></li>
 
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login-path' %}">Login</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'register-path' %}">Join</a></li>
