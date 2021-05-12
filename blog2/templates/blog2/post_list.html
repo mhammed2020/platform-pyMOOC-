@@ -70,7 +70,7 @@
  
 
       <p >{{post.content | safe | truncatewords_html:15}}.</p>
-      <a href="{% url 'detail-path' post.pk %}" class="btn btn-primary">View Course</a>
+      <a href="{% url 'detail-path' post.pk %}" class="btn btn-outline-primary">View Course</a>
     </div>
   </div>
   {% endfor %}

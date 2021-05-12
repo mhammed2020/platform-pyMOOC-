@@ -9,7 +9,7 @@
  #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #0c65bd;
+    background-color:#0c65bd;
 }
 
 
@@ -55,4 +55,17 @@ input, button, select, optgroup, textarea {
   height: 50px;
   border-radius: 50%;
   margin-top: -12px;
+  margin-left: -275px;
+}
+
+header.masthead {
+  padding-top: 17rem;
+  padding-bottom: 12.5rem;
+  color: black;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
 }
