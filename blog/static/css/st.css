@@ -7,9 +7,9 @@
   }
 
  #mainNav.navbar-shrink {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color:#0c65bd;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    background-color:#003F72;
 }
 
 
@@ -50,13 +50,16 @@ input, button, select, optgroup, textarea {
   margin-bottom: 30px;
 }
 
+
 .img-py {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-top: -12px;
-  margin-left: -275px;
+  margin-top: -10px;
+  margin-left: -164px;
+  margin-bottom: 6px;
 }
+
 
 header.masthead {
   padding-top: 17rem;
@@ -68,4 +71,24 @@ a {
   color: black;
   text-decoration: none;
   background-color: transparent;
+}
+
+
+
+/* .navbar-expand-lg .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+  background-color: black;
+  color: #000;
+} */
+
+ul{
+  color: black;
+}
+
+
+.navbar-expand-lg .navbar-nav {
+  flex-direction: row;
+  margin-bottom: -9px;
+  margin-top: 7px;
 }
