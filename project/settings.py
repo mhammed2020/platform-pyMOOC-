@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'blog2',
     'django_filters',
     'ckeditor',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'formations'
 ]
 
 
@@ -63,6 +64,7 @@ CKEDITOR_CONFIGS = {
             ['Bold', 'Link', 'Unlink', 'Image'],
          ],
     },
+    
     #------------------------
     'special': 
         {'toolbar': 'Special', 'height': 500,

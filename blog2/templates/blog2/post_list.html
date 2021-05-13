@@ -28,14 +28,14 @@
 
 
 
-
+<div class="container" >
 <form method="GET">
 
   {{filter_obj.form | crispy }}
 
 <input type="submit" value="Search" class="btn btn-success">
 </form>
-
+</div>
 
 <div class="row m-5">
     {% for post in page_obj   %} 
