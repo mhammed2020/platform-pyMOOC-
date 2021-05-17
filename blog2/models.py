@@ -5,6 +5,7 @@ from django.urls import reverse
 # Create your models here.
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
+
 class Course(models.Model):
     
     title = models.CharField(max_length=100, blank=True, null=True)
