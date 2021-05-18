@@ -11,7 +11,7 @@ urlpatterns = [
     path('user/<str:username>', views.user_course, name ="user-path"),
     path('esri/', views.esri, name ="esri-path"),
 
-    path('prog/', views.prog, name ="prog-path"),
+    # path('prog/', views.prog, name ="prog-path"),
 
 
 

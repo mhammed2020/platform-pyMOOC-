@@ -6,16 +6,16 @@
 <div class="row mt-2 pl-5" >
 
 {% load static %}
-{% for item in training  %}
+{% for item in training_courses  %}
   
     <div class="card  mr-3" style="width: 18rem;">
-        <img src="{{item.img.url}}" class="card-img-top" alt="...">
+        <img src="{{item.image.url}}" class="card-img-top" alt="...">
 
         <div class="card-body">
           <h5 class="card-title">{{item.title}}</h5>
           <p class="card-text"> {{item.content | safe | truncatewords_html:11}}
 
-          <td> <a href="{% url 'training-path' item.id %}" class="btn btn-outline-success">View</a> </td>
+          <td> <a href="" class="btn btn-outline-success">View</a> </td>
         </div>
       </div>
 

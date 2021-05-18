@@ -123,7 +123,7 @@ def esri(request) :
     return render(request,'blog2/esri.html')
 
 
-def prog(request) :
+# def prog(request) :
 
     
-    return render(request,'blog2/prog.html')
+#     return render(request,'blog2/prog.html')
