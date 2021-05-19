@@ -15,7 +15,7 @@
           <h5 class="card-title">{{item.title}}</h5>
           <p class="card-text"> {{item.content | safe | truncatewords_html:11}}
 
-          <td> <a href="{% url 'training-path' item.id %}" class="btn btn-outline-success">View</a> </td>
+          <td> <a href="{% url 'training-path' item.slug %}" class="btn btn-outline-success">View</a> </td>
         </div>
       </div>
 

@@ -10,8 +10,8 @@ def list_view(request) :
 
 
 
-def training_course(request,id) :
-    user = Training.objects.get(id = id )
+def training_course(request,slug) :
+    user = Training.objects.get(slug = slug )
 
 
 

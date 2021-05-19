@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -7,8 +8,13 @@ class Training(models.Model) :
     title = models.CharField(max_length=40)
     content = models.TextField()
     img = models.ImageField(upload_to='training-pics/')
+    slug = models.SlugField(blank=True, null=True)
 
-    
+
+    def save(self,*args,**kwargs):
+        #logic
+        self.slug = slugify(self.title)
+        super(Training,self).save(*args,**kwargs)
 
     def __str__(self) :
         
