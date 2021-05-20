@@ -32,7 +32,14 @@
 
 {% for item in training  %}
   
-<li class="list-group-item">{{item.title}}</li>
+  <a href="{% url 'training-path' item.slug %}"> 
+    <li class="list-group-item">
+
+
+
+    {{item.title}}</li>
+
+  </a>
 
 {% endfor %}
         
