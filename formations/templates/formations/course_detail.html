@@ -1,0 +1,52 @@
+{% extends "blog/home.html" %}
+
+
+{% block content %}
+
+
+
+<div class="row">
+
+
+  <div class="col-md-8 mr-5" >
+    <img src="{{course.image.url}}" class="card-img-top" alt="...">
+
+    <div class="card-body">
+      <h5 class="card-title">{{course.title}}</h5>
+      <p class="card-text">{{course.content}}.</p>
+
+      <a href="{% url 'list-path' %}" class="btn btn-primary">Back</a>
+
+</div>
+  </div>
+  
+{% load static %}
+
+  <div class="col-md-3" >
+
+
+      <div class="card mt-3 border-info" style="width: 16rem;">
+        <img src="{% static 'assets/nnfs-1.png' %}" class="card-img-top mb-3" alt="...">
+
+        <ul class="list-group list-group-flush">
+
+{% for item in training  %}
+  
+<li class="list-group-item">{{item.title}}</li>
+
+{% endfor %}
+        
+        </ul>
+      </div>
+
+
+  </div>
+
+
+
+  </div>
+
+
+
+
+{% endblock  %}

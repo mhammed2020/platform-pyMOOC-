@@ -27,9 +27,18 @@ class Course(models.Model):
     content = models.TextField() 
     training = models.ForeignKey(Training,related_name='course' , on_delete=models.CASCADE)
     image = models.ImageField(upload_to ='courses_for_pics')
- 
+        
+    slug = models.SlugField(blank=True, null=True)
+
+
+    def save(self,*args,**kwargs):
+        #logic
+        self.slug = slugify(self.title)
+        super(Course,self).save(*args,**kwargs)
+        
     def __str__(self):
         return self.title 
+
 
         
     
