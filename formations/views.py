@@ -20,9 +20,9 @@ def coure_detail(request,slug) :
     #obj = Course.objects.get(slug=slug1)
     #print(obj.training.slug ,"***********************************")
     # return redirect('coure_detail-path' , slug = obj.slug)
-
+    print(enumerate(Training.objects.all(),1),"------------------------")
     return render(request,'formations/course_detail.html',{'course' :Course.objects.get(slug=slug),
                                                            
-                                                           'training' :Training.objects.all()
+                                                           'training' :enumerate(Training.objects.all(),1)
                                                            
                                                            })

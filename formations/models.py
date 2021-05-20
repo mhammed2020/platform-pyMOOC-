@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from django.utils import timezone
 
 # Create your models here.
 
@@ -9,6 +10,7 @@ class Training(models.Model) :
     content = models.TextField()
     img = models.ImageField(upload_to='training-pics/')
     slug = models.SlugField(blank=True, null=True)
+    training_date =models.DateTimeField(default=timezone.now ,blank=True, null =True, verbose_name ='Creation Date') 
 
 
     def save(self,*args,**kwargs):

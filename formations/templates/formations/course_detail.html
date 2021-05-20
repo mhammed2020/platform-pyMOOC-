@@ -25,21 +25,36 @@
   <div class="col-md-3" >
 
 
-      <div class="card mt-3 border-info" style="width: 16rem;">
+      <div class="card mt-3" style="width: 16rem;">
         <img src="{% static 'assets/nnfs-1.png' %}" class="card-img-top mb-3" alt="...">
 
         <ul class="list-group list-group-flush">
 
-{% for item in training  %}
+          <div class="card-header">
+            Formations à venir
+          </div>
+
+{% for index , item in training  %}
   
+
+
+{% if index < 8 %}
+    
   <a href="{% url 'training-path' item.slug %}"> 
+
     <li class="list-group-item">
 
-
-
-    {{item.title}}</li>
+      
+    {{item.title}}
+    <br>
+    <span class="label_event_date">
+    🗓️ {{item.training_date |date:'d M o'}}
+  </span>
+  </li>
 
   </a>
+
+  {% endif %}
 
 {% endfor %}
         
