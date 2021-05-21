@@ -9,11 +9,11 @@
 
 
   <div class="col-md-8 mr-5" >
-    <img src="{{course.image.url}}" class="card-img-top" alt="...">
+    <img src="{{course1.image.url}}" class="card-img-top" alt="...">
 
     <div class="card-body">
-      <h5 class="card-title">{{course.title}}</h5>
-      <p class="card-text">{{course.content}}.</p>
+      <h5 class="card-title">{{course1.title}}</h5>
+      <p class="card-text">{{course1.content}}.</p>
 
       <a href="{% url 'list-path' %}" class="btn btn-primary">Back</a>
 
@@ -50,6 +50,14 @@
     <span class="label_event_date">
     🗓️ {{item.training_date |date:'d M o'}}
   </span>
+  <br>
+  <i class="fas fa-chalkboard-teacher"></i>
+
+  
+  {{item.course.count}} Courses
+
+
+  
   </li>
 
   </a>
